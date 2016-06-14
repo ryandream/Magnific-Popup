@@ -259,6 +259,17 @@ MagnificPopup.prototype = {
 				});
 				_wrapClasses += ' mfp-close-btn-in';
 			}
+			/** >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			** Author: ryan
+			** Email: ryan@kreedoo.com
+			** Time: 2016-06-14
+			** Behavior : fix that close button does not work **/
+			mfp.container
+				.off('click' + EVENT_NS, '.mfp-close')
+				.on('click' + EVENT_NS, '.mfp-close', function(){
+					mfp.close();
+				});
+			/** <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< **/
 		}
 
 		if(mfp.st.alignTop) {
